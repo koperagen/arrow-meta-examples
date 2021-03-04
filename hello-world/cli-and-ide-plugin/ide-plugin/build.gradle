@@ -32,12 +32,12 @@ buildSearchableOptions.enabled = false
 intellij {
     version "$INTELLIJ_IDEA_VERSION"
     pluginName = "Example"
-    plugins = ["gradle", "gradle-java", "java", "org.jetbrains.kotlin:${KOTLIN_IDEA_VERSION}", "io.arrow-kt.arrow:${ARROW_META_VERSION}"]
+    plugins = ["gradle", "gradle-java", "java", "org.jetbrains.kotlin:${KOTLIN_IDEA_VERSION}", "io.arrow-kt.arrow:1.4.10-SNAPSHOT-1606149534"]
     pluginsRepo = 'https://plugins.jetbrains.com/maven'
-    /*pluginsRepo {
+    pluginsRepo {
         custom("https://meta.arrow-kt.io/idea-plugin/latest-snapshot/updatePlugins.xml")
         maven('https://plugins.jetbrains.com/maven')
-    }*/
+    }
 }
 
 compileKotlin {
