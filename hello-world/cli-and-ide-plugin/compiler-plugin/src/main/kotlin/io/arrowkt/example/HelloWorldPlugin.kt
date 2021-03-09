@@ -12,13 +12,13 @@ val Meta.helloWorld: CliPlugin
       meta(
         namedFunction(
           ctx = this,
-          match = { name == "helloWorld" }) { c ->
+          match = { element.name == "helloWorld" }) { c ->
           Transform.replace(
-            replacing = c,
+            replacing = c.element,
             newDeclaration =
             """|fun helloWorld(): Unit =
                |  println("Hello ΛRROW Meta!")
-               |""".function.syntheticScope
+               |""".function(null).syntheticScope
           )
         }
       )
